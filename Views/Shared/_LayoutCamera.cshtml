@@ -1,0 +1,320 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>@Page.Title</title>
+
+    @*icon fontawesome*@
+    <link href="~/Public/fontawesome/css/fontawesome.css" rel="stylesheet" />
+    <link href="~/Public/fontawesome/css/brands.css" rel="stylesheet" />
+    <link href="~/Public/fontawesome/css/solid.css" rel="stylesheet" />
+
+    @*Bootstrap*@
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+
+    @*owl slider*@
+    <link href="~/Public/owlcarousel/assets/owl.carousel.min.css"/>
+    <link href="~/Public/owlcarousel/assets/owl.theme.default.min.css"/>
+    <script src="~/Scripts/jquery-3.7.1.min.js"></script>
+    <script src="~/Public/owlcarousel/owl.carousel.min.js"></script>
+
+    @*css*@
+    <link href="~/Public/css/Style.css" rel="stylesheet" />
+
+    @RenderSection("header", required: false)
+</head>
+<body>
+    <section class="header clearfix ">
+        <div class="container-fluid py-2 border border-1 ">
+            <div class="row">
+                <div class="col-md-12 text-center text-white text-capitalize text-bol fw-bolder sogant">
+                    <div class="sogant-title">
+                        thời gian tạo ra câu chuyện, khoảnh khác tạo ra kỉ niệm
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="mainmenu bg-main-menu clearfix">
+        <nav class="navbar bg-body-tertiary w-100">
+            <div class="container-fluid">
+
+                <div class="btn-group">
+                    <button class="btn btn-close-white" type="button" data-bs-toggle="offcanvas" data-bs-target="#staticBackdrop" aria-controls="staticBackdrop">
+                        <i class="fa-solid fa-bars"></i>
+                    </button>
+                    <div class="box">
+                        <input type="text" placeholder="Search..." />
+                        <div type="button" class="btn">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </div>
+                    </div>
+                </div>
+
+
+                <a class="navbar-brand logoShop text-center" href="#">Memorise Camera</a>
+
+                <div class="btn-group" role="group" aria-label="Basic example">
+
+
+                    <div typeof="button" class="btn" data-bs-toggle="modal" data-bs-target="#exampleModalScrollable">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                    </div>
+
+                    <div type="button" class="btn">
+                        <i class="fa-solid fa-user"></i>
+                    </div>
+                </div>
+
+                <div class="offcanvas offcanvas-start" data-bs-backdrop="static" tabindex="-1" id="staticBackdrop" aria-labelledby="staticBackdropLabel">
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title" id="staticBackdropLabel">Danh Mục</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="#">
+                                    @Html.ActionLink("Home", "Index", "Home")
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link " aria-current="page" href="#">
+                                    @Html.ActionLink("Produce", "Produce", "Home")
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link " aria-current="page" href="#">
+                                    News
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link " aria-current="page" href="#">
+                                    Infomation
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link " aria-current="page" href="#">
+                                    Contact
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </section>
+
+    <section class="slideShow clearfix  ">
+        <section id="home" class="carousel">
+            <div class="slides">
+                <div class="slide">
+                    <img src="~/Public/images/camera1.jpeg" alt="Slide 1">
+                    <div class="slide-content">
+                        <h3>Welcome to MA School</h3>
+                        <p>Discover our commitment to excellence in education and the success of every student.</p>
+                        <a href="#about" class="read-more">Read More</a>
+                    </div>
+                </div>
+                <div class="slide">
+                    <img src="~/Public/images/camera2.jpg" alt="Slide 2">
+                    <div class="slide-content">
+                        <h3>Explore Our Programs</h3>
+                        <p>We offer a wide range of programs designed to prepare students for future challenges.</p>
+                        <a href="#programs" class="read-more">Read More</a>
+                    </div>
+                </div>
+                <div class="slide">
+                    <img src="~/Public/images/camera1.jpeg" alt="Slide 3">
+                    <div class="slide-content">
+                        <h3>Join Our Community</h3>
+                        <p>Become a part of a vibrant community focused on learning and personal growth.</p>
+                        <a href="#contact" class="read-more">Read More</a>
+                    </div>
+                </div>
+                <div class="slide">
+                    <img src="~/Public/images/camera2.jpg" alt="Slide 3">
+                    <div class="slide-content">
+                        <h3>Join Our Community</h3>
+                        <p>Become a part of a vibrant community focused on learning and personal growth.</p>
+                        <a href="#contact" class="read-more">Read More</a>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+    </section>
+
+    <section class="maincontent clearfix">
+        @RenderBody()
+    </section>
+
+    <section class="footer clearfix">
+        <div class="container">
+            <footer class="py-5">
+                <div class="row">
+                    <div class="col-12 col-md-6 mb-3">
+                        <h5>Section</h5>
+                        <ul class="nav flex-column">
+                            <li class="nav-item mb-2">
+                                <a href="#" class="nav-link p-0 text-body-secondary">Home</a>
+                            </li>
+                            <li class="nav-item mb-2">
+                                <a href="#" class="nav-link p-0 text-body-secondary">Produce</a>
+                            </li>
+                            <li class="nav-item mb-2">
+                                <a href="#" class="nav-link p-0 text-body-secondary">News</a>
+                            </li>
+                            <li class="nav-item mb-2">
+                                <a href="#" class="nav-link p-0 text-body-secondary">Information</a>
+                            </li>
+                            <li class="nav-item mb-2">
+                                <a href="#" class="nav-link p-0 text-body-secondary">Contact</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-12 col-md-6 mb-3">
+                        <form>
+                            <h5>About</h5>
+                            <p>Monthly digest of what's new and exciting from us.</p>
+                            <div class="d-flex flex-column flex-sm-row w-100 gap-2">
+                                <label for="newEmail" class="visually-hidden">Email address</label>
+                                <input  id="newEmail" type="text" class="form-control" placeholder="Email address" />
+                                <button class="btn btn-primary" type="button">Subscribe</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </section>
+
+    <section class="copyright clearfix">
+        <div class="container d-flex flex-column flex-sm-row justify-content-between py-4 border-top ">
+            <p>© Masv:2200005945 - Bui Thi Thanh Vi</p>
+            <ul class="list-unstyled d-flex">
+                <li class="ms-3">
+                    <a class="link-body-emphasis" href="">
+                        <i class="fa-brands fa-twitter"></i>
+                    </a>
+                </li>
+                <li class="ms-3">
+                    <a class="link-body-emphasis" href="">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                </li>
+                <li class="ms-3">
+                    <a class="link-body-emphasis" href="">
+                        <i class="fa-brands fa-facebook"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Modal spopping cart -->
+    <div class="modal-cart">
+            <div class="modal fade" id="exampleModalScrollable" tabindex="-1" aria-labelledby="exampleModalScrollableTitle" style="display: none;" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-scrollable">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <nav>
+                                <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                                    <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab"
+                                            data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home"
+                                            aria-selected="true">
+                                        <i class="fa-solid fa-cart-flatbed-suitcase"></i>
+                                        Giỏ hàng của bạn
+                                    </button>
+                                    <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile"
+                                            type="button" role="tab" aria-controls="nav-profile" aria-selected="false">
+                                        <i class="fa-regular fa-user"></i>
+                                        Tài khoản
+                                    </button>
+                                </div>
+                            </nav>
+                        </div>
+
+                        <div class="modal-body">
+                            <div class="tab-content" id="nav-tabContent">
+                                <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab"
+                                     tabindex="0">
+
+                                    <div class="d-flex justify-content-between align-items-center ">
+                                        <h1 class="fw-bold mb-0 ">Shopping Cart</h1>
+                                        <h6 class="mb-0 text-muted">3 items</h6>
+                                    </div>
+
+                                    <hr class="my-3" />
+
+                                    <div class="row">
+
+
+                                    </div>
+
+                                </div>
+
+                                <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab"
+                                     tabindex="0">
+                                    <nav>
+                                        <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                                            <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab"
+                                                    data-bs-target="#nav-login" type="button" role="tab" aria-controls="nav-login"
+                                                    aria-selected="true">
+                                                Đăng nhập
+                                            </button>
+                                            <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab"
+                                                    data-bs-target="#nav-register" type="button" role="tab" aria-controls="nav-register"
+                                                    aria-selected="false">
+                                                Đăng ký
+                                            </button>
+                                        </div>
+                                    </nav>
+                                    <div class="tab-content" id="nav-tabContent">
+                                        <div class="tab-pane fade show active" id="nav-home" role="tabpanel"
+                                             aria-labelledby="nav-home-tab" tabindex="0">
+                                        </div>
+                                        <div class="tab-pane fade" id="nav-profile" role="tabpanel"
+                                             aria-labelledby="nav-profile-tab" tabindex="0">...</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-outline-dark" data-bs-dismiss="modal">Back to shop</button>
+                            <button type="button" class="btn btn-primary">Change</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    <script src="~/Scripts/bootstrap.bundle.min.js"></script>
+
+    <script src="~/Public/js/Main.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $('.owl-carousel').owlCarousel({
+                loop: true,
+                margin: 10,
+                nav: true,
+                responsive: {
+                    0: {
+                        items: 1
+                    },
+                    600: {
+                        items: 3
+                    },
+                    1000: {
+                        items: 5
+                    }
+                }
+            })
+        });
+    </script>
+    @RenderSection("footer", required: false)
+</body>
+</html>

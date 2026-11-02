@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="7e9e5abce5d44a70942e83cb8ccead24" Name="Diagram1">
+        <EntityTypeShape EntityType="SQLCameraModel.admin" Width="1.5" PointX="5.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SQLCameraModel.category" Width="1.5" PointX="0.75" PointY="3" IsExpanded="true" />
+        <EntityTypeShape EntityType="SQLCameraModel.coupon" Width="1.5" PointX="7.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SQLCameraModel.customer" Width="1.5" PointX="0.75" PointY="7.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="SQLCameraModel.order_items" Width="1.5" PointX="5.25" PointY="2.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SQLCameraModel.order" Width="1.5" PointX="3" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SQLCameraModel.product" Width="1.5" PointX="3" PointY="2.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="SQLCameraModel.review" Width="1.5" PointX="8.25" PointY="2.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="SQLCameraModel.product_category" Width="1.5" PointX="9.75" PointY="6.75" IsExpanded="true" />
+        <AssociationConnector Association="SQLCameraModel.FK__products__catego__5070F446" ManuallyRouted="false" />
+        <AssociationConnector Association="SQLCameraModel.FK__orders__customer__59063A47" ManuallyRouted="false" />
+        <AssociationConnector Association="SQLCameraModel.FK__reviews__custome__628FA481" ManuallyRouted="false" />
+        <AssociationConnector Association="SQLCameraModel.FK__order_ite__order__5BE2A6F2" ManuallyRouted="false" />
+        <AssociationConnector Association="SQLCameraModel.FK__order_ite__produ__5CD6CB2B" ManuallyRouted="false" />
+        <AssociationConnector Association="SQLCameraModel.FK__reviews__product__619B8048" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

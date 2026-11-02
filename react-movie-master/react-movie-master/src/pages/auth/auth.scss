@@ -1,0 +1,34 @@
+.auth-page {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 24px;
+  z-index: 9999;
+
+  /* Dark overlay to separate from the home hero/banner behind */
+  background: rgba(0, 0, 0, 0.65);
+}
+
+.auth-card {
+  width: 100%;
+  max-width: 420px;
+  padding: 28px;
+  border-radius: 16px;
+
+  background: rgba(0, 0, 0, 0.55);
+  backdrop-filter: blur(10px);
+}
+
+.auth-error {
+  margin-top: 12px;
+}
+
+.auth-footer {
+  margin-top: 12px;
+}
